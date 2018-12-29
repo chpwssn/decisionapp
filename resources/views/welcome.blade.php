@@ -81,10 +81,13 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    decisionapp.io
+                    {{config('app.name')}}
                 </div>
                 <p>
                     A simple app to help you remember to journal your decisions.
+                </p>
+                <p>
+                    <i>Get started by clicking "LOGIN" above!</i>
                 </p>
             </div>
         </div>

@@ -81,7 +81,7 @@ $user = App\User::where('sub', Auth::user()->sub)->get()[0];
                     @else
                         <div style="text-align: center; padding: 16px">
                             <p><i>You haven't created a reminder yet, create one using the "Create Reminder" form.</i></p>
-                            <p>Send yourself an example reminder: create a reminder with its date in the past.</p>
+                            <p>Send yourself an example reminder: create a reminder with its date in the past and it will be sent in the next batch. Reminders are checked every five minutes!</p>
                         </div>
                     @endif
                 </div>

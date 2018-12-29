@@ -18,9 +18,11 @@ class CreateDecisionRemindersTable extends Migration
             $table->unsignedInteger('author_id');
             $table->foreign('author_id')->references('id')->on('users');
             $table->string('decision_title');
+            $table->string('decision_link')->nullable();
             $table->date('reminder_date');
             $table->unsignedInteger('sent')->default(0);
             $table->unsignedInteger('skipped')->default(0);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -30,6 +30,7 @@ class DecisionReminder extends Mailable
     public function build()
     {
         return $this->from('reminders@decisionapp.io')
+                    ->subject("Decision Reminder: " . $this->reminder->decision_title)
                     ->text('email.reminder_plain')
                     ->markdown('email.reminder');
     }

@@ -5,7 +5,7 @@ I'm writing you to remind you of your decision **{{$reminder->decision_title}}**
 
 This reminder has been marked as complete and you will not be notified again, to postpone for one day click the snooze button below.
 
-@component('mail::button', ['url' => "https://decisionapp.io/reminder/{$reminder->id}/snooze"])
+@component('mail::button', ['url' => "http://localhost/reminder/{$reminder->id}/snooze"])
 Snooze Reminder
 @endcomponent
 

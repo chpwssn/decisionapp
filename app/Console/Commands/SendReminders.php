@@ -46,7 +46,8 @@ class SendReminders extends Command
         $reminders = DecisionReminder::pending()->get();
         foreach ($reminders as $reminder) {
             Mail::to($reminder->author)->send(new DecisionReminderMail($reminder));
-            dd($reminder);
+            $reminder->sent = 1;
+            $reminder->save();
         }
     }
 }

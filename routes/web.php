@@ -22,4 +22,6 @@ Route::get('/logout', 'Auth\Auth0IndexController@logout' )->name( 'logout' )->mi
 Route::get( '/auth0/callback', '\Auth0\Login\Auth0Controller@callback' )->name( 'auth0-callback' );
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/reminder/{reminder}/skip', 'DecisionReminderController@skip');
+Route::get('/reminder/{reminder}/snooze', 'DecisionReminderController@snooze')->middleware('auth');
+Route::post('/reminder', 'DecisionReminderController@create')->middleware('auth');
+Route::delete('/reminder', 'DecisionReminderController@delete')->middleware('auth');
